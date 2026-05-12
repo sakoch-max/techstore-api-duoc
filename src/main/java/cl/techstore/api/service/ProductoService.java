@@ -28,7 +28,7 @@ public class ProductoService {
         producto.setPrecio(dto.getPrecio());
         producto.setStock(dto.getStock());
         producto.setCategoria(dto.getCategoria());
-        // Si no envían el estado, por defecto es true
+        
         producto.setActivo(dto.getActivo() != null ? dto.getActivo() : Boolean.TRUE);
         
         return productoRepository.save(producto);

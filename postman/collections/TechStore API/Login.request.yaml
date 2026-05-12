@@ -1,0 +1,14 @@
+$kind: http-request
+name: Login
+url: http://localhost:8080/auth/login
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"username\": \"admin@techstore.cl\",\r
+
+    \    \"password\": \"Admin1234\"\r
+
+    }"
+order: 1778132681126

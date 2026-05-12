@@ -1,0 +1,9 @@
+$kind: http-request
+name: Listar Productos
+url: http://localhost:8080/api/productos
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkB0ZWNoc3RvcmUuY2wiLCJpYXQiOjE3NzgxMzI3OTcsImV4cCI6MTc3ODEzNjM5N30.OYSkWhtbbLhEn77CG6oZMNkTnd7FzpyjHiKvEURxepg
+order: 3381241098534800
