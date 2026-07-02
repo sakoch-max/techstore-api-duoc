@@ -1,4 +1,12 @@
 
+FROM maven:3.8.5-openjdk-17 AS builder
+WORKDIR /app
+COPY pom.xml .
+COPY src ./src
+
+RUN mvn clean package -DskipTests 
+
+
 FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
 
@@ -8,6 +16,8 @@ COPY --from=builder /app/target/*.jar app.jar
 
 COPY src/main/resources/wallet /app/wallet
 
+
+RUN adduser -D nobody
 USER nobody
 
 EXPOSE 8080
