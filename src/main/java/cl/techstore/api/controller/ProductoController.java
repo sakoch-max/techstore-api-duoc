@@ -20,13 +20,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import software.amazon.awssdk.services.sqs.SqsClient;
-import software.amazon.awssdk.services.sqs.model.GetQueueUrlRequest;
-import software.amazon.awssdk.services.sqs.model.SendMessageRequest;
-
 import cl.techstore.api.dto.ProductoDTO;
 import cl.techstore.api.model.Producto;
 import cl.techstore.api.service.ProductoService;
+import software.amazon.awssdk.services.sqs.SqsClient;
+import software.amazon.awssdk.services.sqs.model.GetQueueUrlRequest;
+import software.amazon.awssdk.services.sqs.model.SendMessageRequest;
 
 @RestController
 @RequestMapping("/api/productos")
@@ -53,7 +52,7 @@ public class ProductoController {
     public ResponseEntity<Producto> crear(@RequestBody ProductoDTO dto) {
         Producto nuevoProducto = productoService.crear(dto);
         
-        // Disparamos la auditoría tras crear
+        
         enviarAuditoria("CREAR", nuevoProducto);
         
         return ResponseEntity.status(HttpStatus.CREATED).body(nuevoProducto);
