@@ -7,7 +7,6 @@ COPY target/*.jar app.jar
 
 COPY src/main/resources/wallet /app/wallet
 
-
 USER nobody
 
 EXPOSE 8080
