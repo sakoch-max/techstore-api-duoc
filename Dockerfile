@@ -1,16 +1,4 @@
 
-FROM maven:3.9.4-eclipse-temurin-17 AS builder
-WORKDIR /app
-
-
-COPY pom.xml .
-RUN mvn dependency:go-offline
-
-
-COPY src ./src
-RUN mvn clean package -DskipTests
-
-
 FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
 
@@ -18,10 +6,10 @@ WORKDIR /app
 COPY --from=builder /app/target/*.jar app.jar
 
 
+COPY src/main/resources/wallet /app/wallet
+
+
 USER nobody
 
-
 EXPOSE 8080
-
-
 ENTRYPOINT ["java", "-jar", "app.jar"]
