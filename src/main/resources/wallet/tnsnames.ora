@@ -1,0 +1,12 @@
+techstoredb_high = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.sa-santiago-1.oraclecloud.com))(connect_data=(service_name=gf7c84c168d9c26_techstoredb_high.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+techstoredb_medium = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.sa-santiago-1.oraclecloud.com))(connect_data=(service_name=gf7c84c168d9c26_techstoredb_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+techstoredb_low = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.sa-santiago-1.oraclecloud.com))(connect_data=(service_name=gf7c84c168d9c26_techstoredb_low.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+techstoredb_tp = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.sa-santiago-1.oraclecloud.com))(connect_data=(service_name=gf7c84c168d9c26_techstoredb_tp.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+techstoredb_tpurgent = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.sa-santiago-1.oraclecloud.com))(connect_data=(service_name=gf7c84c168d9c26_techstoredb_tpurgent.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+
+
