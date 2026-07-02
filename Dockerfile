@@ -10,15 +10,15 @@ RUN mvn clean package -DskipTests
 FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
 
-
 COPY --from=builder /app/target/*.jar app.jar
 
 
 COPY src/main/resources/wallet /app/wallet
 
 
-RUN adduser -D nobody
-USER nobody
+RUN adduser -D techuser
+USER techuser
+
 
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
